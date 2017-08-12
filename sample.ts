@@ -119,15 +119,23 @@ let myString: string = myStringArray[0];
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class Animal{
-    private name: string;
+    private _name: string;
     protected age: number;
 
     protected constructor(name: string){
-        this.name = name;
+        this._name = name;
     }
 
     move(distanceInMeters: number){
-        return `${this.name} moved ${distanceInMeters} m.`;
+        return `${this._name} moved ${distanceInMeters} m.`;
+    }
+
+    get name(){
+        return this._name;
+    }
+
+    set name(newName: string){
+        this._name = newName;
     }
 }
 
@@ -146,3 +154,4 @@ class Rhino extends Animal{
 // let animal = new Animal("?");
 let animal = new Rhino();
 animal.getAge();
+animal.name = "!";
