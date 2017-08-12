@@ -121,6 +121,7 @@ let myString: string = myStringArray[0];
 class Animal{
     private _name: string;
     protected age: number;
+    static legsCount = 4;
 
     protected constructor(name: string){
         this._name = name;
@@ -150,6 +151,8 @@ class Rhino extends Animal{
         return this.age;
     }
 }
+
+let legsCount = Animal.legsCount;
 
 // let animal = new Animal("?");
 let animal = new Rhino();
