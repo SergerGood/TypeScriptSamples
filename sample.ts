@@ -108,3 +108,11 @@ let mySearch: searchFunc = function(src, sub){
     let result = src.search(sub);
     return result > -1;
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+interface stringArray{
+    readonly [index: number]: string;
+}
+
+let myStringArray: stringArray = ["1", "2"];
+let myString: string = myStringArray[0];
