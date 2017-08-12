@@ -98,3 +98,13 @@ class DigitalClock implements ClockInterface{
 }
 
 let digital = createClock(DigitalClock, 11, 12);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+interface searchFunc{
+    (source: string, subString: string): boolean;
+}
+
+let mySearch: searchFunc = function(src, sub){
+    let result = src.search(sub);
+    return result > -1;
+}
