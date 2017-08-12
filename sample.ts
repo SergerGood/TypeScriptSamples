@@ -116,3 +116,33 @@ interface stringArray{
 
 let myStringArray: stringArray = ["1", "2"];
 let myString: string = myStringArray[0];
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class Animal{
+    private name: string;
+    protected age: number;
+
+    protected constructor(name: string){
+        this.name = name;
+    }
+
+    move(distanceInMeters: number){
+        return `${this.name} moved ${distanceInMeters} m.`;
+    }
+}
+
+class Rhino extends Animal{
+    readonly height: number = 100;
+
+    constructor() {
+        super("Rhino");
+    }
+
+    getAge(){
+        return this.age;
+    }
+}
+
+// let animal = new Animal("?");
+let animal = new Rhino();
+animal.getAge();
