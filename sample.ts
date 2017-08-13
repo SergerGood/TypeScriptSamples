@@ -158,3 +158,39 @@ let legsCount = Animal.legsCount;
 let animal = new Rhino();
 animal.getAge();
 animal.name = "!";
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+abstract class Department{
+    name: string;
+
+    constructor(name: string){
+        this.name = name;
+    }
+
+    printName(): void{
+        console.log(`Department name ${this.name}`);
+    }
+
+    abstract printMeeting(): void;
+}
+
+class AccountingDepartment extends Department{
+
+    constructor(){
+        super("Accounting");
+    }
+
+    printMeeting(): void {
+        console.log("meeting");
+    }
+
+    generateReport(): void{
+        console.log("report");
+    }
+}
+
+let department: Department;
+department = new AccountingDepartment();
+department.printName();
+department.printMeeting();
+//department.generateReport(); error
