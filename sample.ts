@@ -204,3 +204,42 @@ let muAdd: (x: number, y: number) => number =
     function(x: number, y: number) { return x + y; }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+interface Card {
+    suit: string;
+    card: number;
+}
+interface Deck {
+    suits: string[];
+    cards: number[];
+    createCardPicker(this: Deck): () => Card;
+}
+
+let deck: Deck = {
+    suits: ["1", "2", "3"],
+    cards: Array(2),
+    createCardPicker(this: Deck){
+        return () => {
+            let pickedCard = Math.floor(Math.random() * 52);
+            let pickedSuit = Math.floor(pickedCard / 13);
+
+            return { suit: this.suits[pickedSuit], card: pickedCard % 13};
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+interface UIElement{
+    addClickListener(onClick: (this: void, e: Event) => void): void;
+}
+
+class Handler{
+    info: string;
+    onClick(this: void, e: Event){
+        console.log('clicked');
+    }
+}
+
+let handler = new Handler;
+let uiElement: UIElement;
+uiElement.addClickListener(handler.onClick);
