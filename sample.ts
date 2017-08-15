@@ -184,7 +184,7 @@ class AccountingDepartment extends Department{
         console.log("meeting");
     }
 
-    generateReport(): void{
+    generateReport = () => {
         console.log("report");
     }
 }
@@ -194,3 +194,14 @@ department = new AccountingDepartment();
 department.printName();
 department.printMeeting();
 //department.generateReport(); error
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let muFunc = function(x: number, y:number) : number{
+    return x + y;
+}
+
+let muAdd: (x: number, y: number) => number =
+    function(x: number, y: number) { return x + y; }
+
+
