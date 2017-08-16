@@ -8,3 +8,15 @@ document.body.appendChild(button);
 
 let div: Element = document.createElement("div");
 document.body.appendChild(div);
+
+(div as HTMLElement).style.height = squareSize;
+(div as HTMLElement).style.width = squareSize;
+
+let colorChange: Function = (element: Element, color: string): boolean => {
+    (<HTMLElement>element).style.backgroundColor = color;
+    return true; 
+}
+
+(button as HTMLElement).onclick = () => {
+    colorChange(div, usedColor);
+}
