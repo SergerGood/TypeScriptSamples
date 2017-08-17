@@ -1,3 +1,16 @@
+class colorChange{
+    div: Element;
+
+    constructor(div: Element){
+        this.div = div;
+    }
+
+    change(color: string): boolean {
+        (this.div as HTMLElement).style.backgroundColor = color;
+        return true;
+    }
+}
+
 let usedColor: string = "green";
 let squareSizeNumber: number = 100;
 let squareSize: string = `${ squareSizeNumber }px`;
