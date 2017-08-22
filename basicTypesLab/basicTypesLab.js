@@ -15,3 +15,4 @@ var colorChange = function (element, color) {
 button.onclick = function () {
     colorChange(div, usedColor);
 };
+//# sourceMappingURL=basicTypesLab.js.map

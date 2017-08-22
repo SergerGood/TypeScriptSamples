@@ -39,3 +39,4 @@ elementSets.map(function (element, index) {
     document.body.appendChild(element.div);
     document.body.appendChild(element.button);
 });
+//# sourceMappingURL=exercise_2.js.map
