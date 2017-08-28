@@ -1,5 +1,5 @@
 namespace Zoo {
-    interface Animals {
+    export interface Animals {
         skinType: string;
         isMammal(): boolean;
     }

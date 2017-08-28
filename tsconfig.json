@@ -1,6 +1,6 @@
 {
     "exclude": [
-        "namespaces"
+        //"namespaces"
     ],
     "compileOnSave": true,
     "compilerOptions": {
