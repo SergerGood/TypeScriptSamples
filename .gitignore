@@ -1,1 +1,5 @@
 out/
+typing/
+typings.json
+typings/globals/jquery/index.d.ts
+typings/index.d.ts
