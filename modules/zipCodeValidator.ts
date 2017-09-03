@@ -6,5 +6,9 @@ class ZipCodeValidator implements Validation.StringValidation {
     }
 }
 
+export default function (s: string) {
+    return s.length === 5 && numberRegexp.test(s);
+}
+
 export { ZipCodeValidator };
 export { ZipCodeValidator as mainValidator};
