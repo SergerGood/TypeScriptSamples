@@ -3,3 +3,5 @@ typing/
 typings.json
 typings/globals/jquery/index.d.ts
 typings/index.d.ts
+modules/node_modules/
+modules/package-lock.json
