@@ -8,3 +8,5 @@ dts-gen -m chance
 https://microsoft.github.io/TypeSearch/
 npm install --save lodash
 npm install --save @types/lodash
+
+tsc --outfile extendedNamespacesLab.js extendedNamespacesLab.ts.
