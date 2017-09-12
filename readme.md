@@ -9,4 +9,7 @@ https://microsoft.github.io/TypeSearch/
 npm install --save lodash
 npm install --save @types/lodash
 
-tsc --outfile extendedNamespacesLab.js extendedNamespacesLab.ts.
+tsc --outfile extendedNamespacesLab.js extendedNamespacesLab.ts
+
+npm install express -g
+node server.js

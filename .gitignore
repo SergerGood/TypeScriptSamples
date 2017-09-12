@@ -5,3 +5,5 @@ typings/globals/jquery/index.d.ts
 typings/index.d.ts
 modules/node_modules/
 modules/package-lock.json
+namespacesAndModulesLabs/modulesLab/node_modules/
+namespacesAndModulesLabs/modulesLab/package-lock.json
