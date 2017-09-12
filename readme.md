@@ -13,3 +13,5 @@ tsc --outfile extendedNamespacesLab.js extendedNamespacesLab.ts
 
 npm install express -g
 node server.js
+
+tsc --module amd main.ts
