@@ -10,8 +10,12 @@ namespace Advanced {
     }
 
     function padLeft(value: string, padding: string | number) {
-        if (typeof padding === "number") { }
+        if (isNumber(padding)) { }
         if (typeof padding === "string") { }
+    }
+
+    function isNumber(x: any): x is number {
+        return typeof x === "number";
     }
 
     interface Bird {
@@ -30,5 +34,12 @@ namespace Advanced {
 
     let pet = getSmallPet();
     pet.layEggs();
-    //pet.fly(); ERROR
+
+    if ((<Bird>pet).fly) {
+        (<Bird>pet).fly();
+    }
+
+    function isFish(pet: Fish | Bird): pet is Fish {
+        return (<Fish>pet).swim !== undefined;
+    }
 }
